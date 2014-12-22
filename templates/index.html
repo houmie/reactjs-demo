@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Golden Records</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this templates -->
+    <link href="{{ url_for('static', filename='css/jumbotron-narrow.css') }}" rel="stylesheet">
+
+    <script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/react.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/JSXTransformer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/showdown.js') }}"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Golden Records</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Golden Records</h1>
+        <p class="lead">This is a test platform to showcase Reactjs within an existing jQuery project.</p>
+        <!--<p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>-->
+    </div>
+
+    <div class="row marketing">
+        <div role="tabpanel">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#merge-facilities" aria-controls="merge-facilities" role="tab" data-toggle="tab">Merge Facilities</a></li>
+                <li role="presentation"><a href="#merge-persons" aria-controls="merge-persons" role="tab" data-toggle="tab">Merge Persons</a></li>
+                <li role="presentation"><a href="#bulk-merge" aria-controls="bulk-merge" role="tab" data-toggle="tab">Bulk Merge</a></li>
+                <li role="presentation"><a href="#golden-records" aria-controls="golden-records" role="tab" data-toggle="tab">Golden Records</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="merge-facilities">...</div>
+                <div role="tabpanel" class="tab-pane" id="merge-persons">...</div>
+                <div role="tabpanel" class="tab-pane" id="bulk-merge">...</div>
+                <div role="tabpanel" class="tab-pane" id="golden-records">
+                    <div class="row">
+                        <div class="col-md-2"><div id="search-golden-facilities"></div></div>
+                        <div class="col-md-8"><div id="result-golden-facilities"></div></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Company 2014</p>
+    </footer>
+
+</div> <!-- /container -->
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ url_for('static', filename='js/ie10-viewport-bug-workaround.js') }}"></script>
+
+<script type="text/jsx" src="{{ url_for('static', filename='js/golden-record.js') }}"></script>
+</body>
+</html>
