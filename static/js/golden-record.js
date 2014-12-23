@@ -54,12 +54,21 @@ var SearchBox = React.createClass({
         });
     },
     getInitialState: function () {
-        return {data: [{"x": "huh"}]};
+        return {data: [{"x": "Please search."}]};
     },
     render: function(){
         return (
-            <div className="searchBox">
-                SID <SearchForm onSearchSubmit={this.handleSearchSubmit} />
+            <div class="row">
+                <div class="col-md-3">
+                    <div className="searchForm">
+                        <SearchForm onSearchSubmit={this.handleSearchSubmit} />
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div className="searchResult">
+                        <SearchResult data={this.state.data} />
+                    </div>
+                </div>
             </div>
         )
     }
@@ -69,10 +78,5 @@ var SearchBox = React.createClass({
 
 React.render(
     <SearchBox url="http://127.0.0.1:5000/search"/>,
-    document.getElementById('search-golden-facilities')
-);
-
-React.render(
-    <SearchResult data='{"x":"test"}'/>,
-    document.getElementById('result-golden-facilities')
+    document.getElementById('golden-records')
 );
